@@ -21,12 +21,14 @@ public:
         "신상호","안우진","예두해","유경찬","이중무","장민석","정유한","조남현","조석호","주민기"
     };
 
-
+    QPushButton * Button[20];
 
 private slots:
     void on_sit_set_BT_clicked();
 
     void on_name_num_BT_clicked();
+
+    void on_name_set_clicked();
 
 private:
     Ui::Class_sit *ui;

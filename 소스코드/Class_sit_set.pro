@@ -25,12 +25,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        class_sit.cpp
+        class_sit.cpp \
+    name_set_form.cpp
 
 HEADERS += \
-        class_sit.h
+        class_sit.h \
+    name_set_form.h
 
 FORMS += \
-        class_sit.ui
+        class_sit.ui \
+    name_set_form.ui
 
 RC_FILE = icon.rc
