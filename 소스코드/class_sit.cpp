@@ -28,8 +28,6 @@ Class_sit::Class_sit(QWidget *parent) :QWidget(parent),ui(new Ui::Class_sit)
     Button[17] = ui->Sit_18;
     Button[18] = ui->Sit_19;
     Button[19] = ui->Sit_20;
-
-
 }
 
 Class_sit::~Class_sit()
@@ -102,8 +100,5 @@ void Class_sit::on_name_set_clicked()
         QWidget * name_set = new name_set_form(this,Class_std_name,&name_set_flog);
         name_set->show();
         name_set_flog = true;
-    }
-    else{
-
     }
 }

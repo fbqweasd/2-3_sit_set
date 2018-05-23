@@ -29,7 +29,6 @@ private slots:
     void on_name_num_BT_clicked();
 
     void on_name_set_clicked();
-
 private:
     Ui::Class_sit *ui;
 };

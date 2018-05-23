@@ -64,6 +64,7 @@ name_set_form::name_set_form(QWidget *parent,QString * class_name,bool * flog) :
 
     for(int i=0;i<20;i++){
         num_labal[i]->setText(QString::number(i+1)+"번 : ");
+        name_line[i]->setText(class_name_set[i]);
     }
 }
 
@@ -78,6 +79,7 @@ void name_set_form::on_Setting_Bt_clicked()
        class_name_set[i] = name_line[i]->text();
        qDebug() << i << "번 : "<<class_name_set;
    }
+
     *flog_bt = false;
     delete this;
 }

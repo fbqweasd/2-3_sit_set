@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>800</height>
+    <width>500</width>
+    <height>850</height>
    </rect>
   </property>
   <property name="font">
@@ -22,11 +22,16 @@
   <widget class="QPushButton" name="Setting_Bt">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>700</y>
-     <width>141</width>
-     <height>71</height>
+     <x>60</x>
+     <y>710</y>
+     <width>151</width>
+     <height>81</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>설정</string>
@@ -35,28 +40,63 @@
   <widget class="QPushButton" name="can_Bt">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>700</y>
-     <width>141</width>
-     <height>71</height>
+     <x>280</x>
+     <y>710</y>
+     <width>161</width>
+     <height>81</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>취소</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>501</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>학생 정보 수정</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>20</y>
-     <width>371</width>
-     <height>657</height>
+     <y>80</y>
+     <width>461</width>
+     <height>601</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QHBoxLayout" name="name_num_line">
     <item>
      <layout class="QVBoxLayout" name="num_arr">
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
       <item>
        <widget class="QLabel" name="num_labal">
         <property name="font">
@@ -321,65 +361,208 @@
     </item>
     <item>
      <layout class="QVBoxLayout" name="name_arr">
+      <property name="spacing">
+       <number>7</number>
+      </property>
       <item>
-       <widget class="QLineEdit" name="name_text"/>
+       <widget class="QLineEdit" name="name_text">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_2"/>
+       <widget class="QLineEdit" name="name_text_2">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_3"/>
+       <widget class="QLineEdit" name="name_text_3">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_4"/>
+       <widget class="QLineEdit" name="name_text_4">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_5"/>
+       <widget class="QLineEdit" name="name_text_5">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_6"/>
+       <widget class="QLineEdit" name="name_text_6">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_7"/>
+       <widget class="QLineEdit" name="name_text_7">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_8"/>
+       <widget class="QLineEdit" name="name_text_8">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_9"/>
+       <widget class="QLineEdit" name="name_text_9">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_10"/>
+       <widget class="QLineEdit" name="name_text_10">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_11"/>
+       <widget class="QLineEdit" name="name_text_11">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_12"/>
+       <widget class="QLineEdit" name="name_text_12">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_13"/>
+       <widget class="QLineEdit" name="name_text_13">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_14"/>
+       <widget class="QLineEdit" name="name_text_14">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_15"/>
+       <widget class="QLineEdit" name="name_text_15">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_16"/>
+       <widget class="QLineEdit" name="name_text_16">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_17"/>
+       <widget class="QLineEdit" name="name_text_17">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_18"/>
+       <widget class="QLineEdit" name="name_text_18">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_19"/>
+       <widget class="QLineEdit" name="name_text_19">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="name_text_20"/>
+       <widget class="QLineEdit" name="name_text_20">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
