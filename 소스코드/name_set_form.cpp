@@ -14,6 +14,7 @@ name_set_form::name_set_form(QWidget *parent,QString * class_name,bool * flog) :
     ui->setupUi(this);
 
     flog_bt = flog; // flog 포인터 연결
+
     class_name_set = class_name;
 
     /* 번호 라벨 포인터로 연결 */
@@ -77,7 +78,6 @@ void name_set_form::on_Setting_Bt_clicked()
 {
    for(int i=0;i<20;i++){
        class_name_set[i] = name_line[i]->text();
-       qDebug() << i << "번 : "<<class_name_set;
    }
 
     *flog_bt = false;

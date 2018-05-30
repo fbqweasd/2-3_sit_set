@@ -3,12 +3,13 @@
 #include "name_set_form.h"
 #include <cstdlib>
 #include <ctime>
+#include <QDebug>
 
 Class_sit::Class_sit(QWidget *parent) :QWidget(parent),ui(new Ui::Class_sit)
 {
     ui->setupUi(this);
 
-    Button[0] = ui->Sit_1;
+    Button[0] = ui->Sit_1; // 하드코딩으로 버튼의 위치를 등록
     Button[1] = ui->Sit_2;
     Button[2] = ui->Sit_3;
     Button[3] = ui->Sit_4;
@@ -36,24 +37,33 @@ Class_sit::~Class_sit()
 }
 
 int List_sit[20] = {0,}; // 중복검사 리스트 or 자리 배치
+int NULL_list[21] = {0,}; // 학생 제거 리스트 [0]값에는 학생의 수가 들어가여1
 
 bool name_num = false;
 bool name_set_flog = false;
 
 void Class_sit::on_sit_set_BT_clicked()
 {
-    for(int i=0;i<20;i++)
-        List_sit[i] = 0;
+    NULL_list[0] = 0;
+
+    for(int i=0;i<20;i++){ //NULL 학생 리스트 추가
+        List_sit[i] = 0; //학생 리스트 초기화
+
+        if(Class_std_name[i] == ""){ // NULL 학생 판단
+            NULL_list[0]++; //이 친구는 NULL 학생의 명수를 cont해요!
+            NULL_list[NULL_list[0]] = i; //없는 학생의 번호를 추가 (번호 -1 )
+        }
+    }
 
     srand((unsigned int)time(NULL));
 
-    for(int i=0;i<20;i++){
+    for(int i=0;i<20 - NULL_list[0];i++){
 
         hi:
 
         int m = rand() % 20 + 1; //랜덤 번호 받아옴
 
-        for(int j=0;j<20;j++){
+        for(int j=0;j<20-NULL_list[0];j++){ // 리스트 검사
             if(List_sit[j] == 0){
                 break;
             } // 리스트가 비어있는 경우 탈출
@@ -63,13 +73,24 @@ void Class_sit::on_sit_set_BT_clicked()
             } // 중복인 경우 반복
         }
 
+        for(int NULL_i=1;NULL_i<=NULL_list[0];NULL_i++){ // NULL학생의 경우 판단
+            if(m == (NULL_list[NULL_i]+1)){
+                goto hi;
+            } // NULL 학생인 경우 반복
+        }
+
         List_sit[i] = m;
 
-        if(name_num)
+        if(name_num){
             Button[i]->setText(Class_std_name[List_sit[i]-1]);
-           else{
-            Button[i]->setText(QString::number(m)+" 번");
         }
+        else{
+            Button[i]->setText(QString::number(List_sit[i])+" 번");
+        }
+    }
+
+    for(int i=20 - NULL_list[0];i<20;i++){
+           Button[i]->setText("");
     }
 }
 
@@ -79,14 +100,14 @@ void Class_sit::on_name_num_BT_clicked()
        return;
 
     if(name_num){
-        for(int i=0;i<20;i++){
+        for(int i=0;i<20-NULL_list[0];i++){
             Button[i]->setText(QString::number(List_sit[i])+" 번");
         }
         ui->name_num_BT->setText("이름으로 변경");
         name_num = false;
     }
     else{
-        for(int i=0;i<20;i++){
+        for(int i=0;i<20-NULL_list[0];i++){
             Button[i]->setText(Class_std_name[List_sit[i]-1]);
         }
         ui->name_num_BT->setText("숫자로 변경");
